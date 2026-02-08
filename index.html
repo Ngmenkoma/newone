@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HopeBridge | Building Better Futures</title>
+    <title>AICODEV</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     
     <!-- Vanta.js libraries for animated background -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+
+    <!--Favicon-->
+      <link rel="icon" href="Logo.jpg" type="image/x-icon">
+
     
     <style>
         :root {
@@ -111,6 +115,7 @@
             padding: 20px 0;
             transition: var(--transition);
             background-color: rgba(255, 255, 255, 0.95);
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
         }
@@ -291,6 +296,151 @@
         .hero-image img:hover {
             transform: perspective(1000px) rotateY(0deg);
         }
+
+        /* Header Social Icons */
+.header-social {
+    display: flex;
+    gap: 12px;
+    margin-left: 20px;
+}
+
+.header-social a {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(42, 157, 143, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.header-social a:hover {
+    background-color: var(--primary);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Map Section - Standalone */
+.map-section {
+    padding: 0;
+    background: #f8f9fa;
+}
+
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+.google-map {
+    width: 100%;
+    height: 100%;
+    border: none;
+    filter: grayscale(20%) contrast(1.1);
+    transition: filter 0.3s ease;
+}
+
+.google-map:hover {
+    filter: grayscale(0%) contrast(1);
+}
+
+/* Map Overlay Info Card */
+.map-overlay {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 100;
+}
+
+.map-info-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    max-width: 300px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.map-info-card h3 {
+    color: var(--primary);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.map-info-card p {
+    color: var(--dark);
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.map-contact-info {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.map-contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.map-contact-info i {
+    color: var(--primary);
+    width: 16px;
+}
+
+/* Responsive Map */
+@media (max-width: 768px) {
+    .map-container {
+        height: 400px;
+    }
+    
+    .map-overlay {
+        position: relative;
+        top: 0;
+        left: 0;
+        padding: 20px;
+    }
+    
+    .map-info-card {
+        max-width: 100%;
+        margin-top: 0;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@media (max-width: 480px) {
+    .map-container {
+        height: 350px;
+    }
+    
+    .map-info-card {
+        padding: 20px;
+    }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .header-social {
+        display: none;
+    }
+}
 
         /* About Section */
         .section {
@@ -528,288 +678,264 @@
 
         /* Team Section */
         .team {
-            background-color: var(--light);
-        }
+    background-color: var(--light);
+}
 
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
 
-        .team-member {
-            background-color: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            animation: fadeInUp 0.8s ease-out;
-        }
+.team-member {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    animation: fadeInUp 0.8s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
 
-        .team-member:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
 
-        .member-image {
-            height: 250px;
-            overflow: hidden;
-        }
+.member-image-container {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    margin-bottom: 10px;
+    position: relative;
+}
 
-        .member-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
+/* Passport-style circular photo */
+.member-image {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+}
 
-        .team-member:hover .member-image img {
-            transform: scale(1.1);
-        }
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
 
-        .member-info {
-            padding: 25px;
-            text-align: center;
-        }
+/* Decorative background element */
+.member-image-container::before {
+    content: '';
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    opacity: 0.1;
+    z-index: 1;
+}
 
-        .member-info h3 {
-            font-size: 1.3rem;
-            margin-bottom: 5px;
-            color: var(--dark);
-        }
+.team-member:hover .member-image img {
+    transform: scale(1.1);
+}
 
-        .member-info p {
-            color: var(--primary);
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
+.member-info {
+    padding: 25px;
+    padding-top: 0;
+    text-align: center;
+    width: 100%;
+}
 
-        .member-info .bio {
-            color: var(--gray);
-            font-size: 0.95rem;
-            margin-bottom: 20px;
-        }
+.member-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    color: var(--dark);
+}
 
-        .member-social {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
+.member-info .position {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    display: block;
+}
 
-        .member-social a {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background-color: rgba(42, 157, 143, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary);
-            text-decoration: none;
-            transition: var(--transition);
-        }
+.member-info .bio {
+    color: var(--gray);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
 
-        .member-social a:hover {
-            background-color: var(--primary);
-            color: white;
-            transform: translateY(-3px);
-        }
+.member-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
 
+.member-social a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(42, 157, 143, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    text-decoration: none;
+    transition: var(--transition);
+    font-size: 1rem;
+}
+
+.member-social a:hover {
+    background-color: var(--primary);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(42, 157, 143, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+    .member-image {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .member-image-container {
+        height: 180px;
+    }
+    
+    .member-info {
+        padding: 20px;
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .member-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .member-image-container {
+        height: 160px;
+    }
+}
         /* Causes Section */
-        .causes {
-            background-color: var(--light);
-        }
+      .causes {
+    background-color: var(--light);
+    padding: 60px 0; /* Reduced section padding */
+}
 
-        .causes-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-        }
+.causes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
 
-        .cause-card {
-            background-color: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            animation: fadeInUp 0.8s ease-out;
-        }
+/* Compact Card Design */
+.cause-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    height: 320px; /* Much more compact */
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
 
-        .cause-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
+.cause-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    border-color: rgba(42, 157, 143, 0.2);
+}
 
-        .cause-image {
-            height: 220px;
-            overflow: hidden;
-        }
+/* Small Image */
+.cause-image {
+    height: 130px;
+    overflow: hidden;
+    position: relative;
+}
 
-        .cause-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
+.cause-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
 
-        .cause-card:hover .cause-image img {
-            transform: scale(1.1);
-        }
+.cause-card:hover .cause-image img {
+    transform: scale(1.05);
+}
 
-        .cause-content {
-            padding: 25px;
-        }
+/* Category Badge */
+.cause-category {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--primary);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
 
-        .cause-content h3 {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-            color: var(--dark);
-        }
+/* Compact Content */
+.cause-content {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
 
-        .cause-content p {
-            color: var(--gray);
-            margin-bottom: 20px;
-        }
+.cause-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: var(--dark);
+    line-height: 1.3;
+}
 
-        .progress-bar {
-            height: 8px;
-            background-color: rgba(42, 157, 143, 0.1);
-            border-radius: 4px;
-            margin-bottom: 15px;
-            overflow: hidden;
-        }
+.cause-content p {
+    color: var(--gray);
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    flex-grow: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limits to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
 
-        .progress {
-            height: 100%;
-            background-color: var(--primary);
-            border-radius: 4px;
-            width: 0;
-            transition: width 1.5s ease-out;
-        }
 
-        .cause-stats {
-            display: flex;
-            justify-content: space-between;
-            color: var(--gray);
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-        }
-
-        /* Live Photo Video Section */
-        .live-photo-section {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-        }
-
-        .video-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .video-card {
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-
-        .video-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .video-card video {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .video-caption {
-            padding: 20px;
-            background-color: white;
-        }
-
-        .video-caption p {
-            font-weight: 600;
-            color: var(--dark);
-            text-align: center;
-            margin: 0;
-        }
-
-        /* Donation CTA */
-        .donation-cta {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: white;
-            text-align: center;
-            padding: 80px 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .donation-cta h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        .donation-cta p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 40px;
-            opacity: 0.9;
-        }
-
-        .donation-form {
-            max-width: 500px;
-            margin: 0 auto;
-            background-color: white;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .donation-options {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 25px;
-            flex-wrap: wrap;
-        }
-
-        .donation-option {
-            padding: 12px 25px;
-            background-color: rgba(42, 157, 143, 0.1);
-            border-radius: 50px;
-            font-weight: 600;
-            color: var(--primary);
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .donation-option:hover, .donation-option.active {
-            background-color: var(--primary);
-            color: white;
-        }
-
-        .donation-input {
-            margin-bottom: 25px;
-        }
-
-        .donation-input input {
-            width: 100%;
-            padding: 16px 20px;
-            border-radius: 10px;
-            border: 2px solid #eee;
-            font-size: 1rem;
-            font-family: 'Poppins', sans-serif;
-            transition: var(--transition);
-        }
-
-        .donation-input input:focus {
-            border-color: var(--primary);
-            outline: none;
-        }
+        
 
         /* Footer */
         footer {
@@ -1219,6 +1345,55 @@
             opacity: 1;
             visibility: visible;
         }
+
+        /* Logo Image Styling */
+.logo-img {
+    height: 45px;
+    width: auto;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+    opacity: 0.95;
+}
+
+/* Different sizes for different sections */
+.logo-img.navbar {
+    height: 40px;
+}
+
+.logo-img.footer {
+    height: 50px;
+    filter: brightness(0) invert(1); /* Makes white for dark footer */
+}
+
+/* Responsive sizes */
+@media (max-width: 992px) {
+    .logo-img {
+        height: 38px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-img {
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-img {
+        height: 30px;
+    }
+}
+
+@media (max-width: 360px) {
+    .logo-img {
+        height: 28px;
+    }
+}
     </style>
 </head>
 <body>
@@ -1227,28 +1402,42 @@
         <div class="container">
             <nav class="navbar">
                 <a href="#" class="logo">
-                    <i class="fas fa-hands-helping logo-icon"></i>
-                    <div class="logo-text">Hope<span>Bridge</span></div>
+                    
+                    <div class="logo-text">AICO<span>DEV</span></div>
+                    <a href="#home" class="logo">
+    <img src="Logo.jpg" alt="AICODEV Logo" class="logo-img">
+</a>
                 </a>
                 
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#team">Team</a></li>
                     <li><a href="#causes">Causes</a></li>
-                    <li><a href="#donate">Donate</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#team">Team</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 
-                <div class="nav-cta">
-                    <a href="#donate" class="btn btn-secondary">Donate Now</a>
-                </div>
                 
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <i class="fas fa-bars"></i>
                 </button>
+
+                <!-- Add this inside the .nav-cta div -->
+<div class="header-social">
+    <!-- Add this with your other social media icons -->
+<a href="https://www.facebook.com/aicodev.ghana" class="social-icon" target="_blank" rel="noopener noreferrer" title="Facebook">
+    <i class="fab fa-facebook-f"></i>
+</a>
+<a href="https://www.linkedin.com/company/aicodev-ghana/" class="social-icon" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+    <i class="fab fa-linkedin-in"></i>
+</a>
+<!-- WhatsApp Link - REPLACE 1234567890 with your actual phone number -->
+<a href="https://wa.me/233541237088" class="social-icon whatsapp-icon" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+</div>
             </nav>
         </div>
     </header>
@@ -1259,9 +1448,9 @@
         <div class="mobile-menu-header">
             <div class="logo">
                 <i class="fas fa-hands-helping logo-icon"></i>
-                <div class="logo-text">Hope<span>Bridge</span></div>
+                <div class="logo-text">AICO<span>DEV</span></div>
             </div>
-            <button class="close-menu" id="closeMenu">
+            <button class="close-menu" id="closeMenu" type="button" aria-label="Close menu">
                 <i class="fas fa-times"></i>
             </button>
         </div>
@@ -1269,15 +1458,13 @@
         <ul class="mobile-nav-links">
             <li><a href="#home" class="mobile-nav-link">Home</a></li>
             <li><a href="#about" class="mobile-nav-link">About</a></li>
-            <li><a href="#gallery" class="mobile-nav-link">Gallery</a></li>
+             <li><a href="#causes" class="mobile-nav-link">Causes</a></li>
             <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+            <li><a href="#gallery" class="mobile-nav-link">Gallery</a></li>
             <li><a href="#team" class="mobile-nav-link">Team</a></li>
-            <li><a href="#causes" class="mobile-nav-link">Causes</a></li>
-            <li><a href="#donate" class="mobile-nav-link">Donate</a></li>
             <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
         </ul>
         
-        <a href="#donate" class="btn btn-secondary btn-block">Donate Now</a>
     </div>
 
     <!-- Hero Section with Vanta.js Background -->
@@ -1286,32 +1473,21 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>Building <span>Better Futures</span> For Everyone</h1>
-                    <p>HopeBridge is a non-profit organization dedicated to creating lasting change in communities around the world through education, healthcare, and sustainable development.</p>
+                    <h1>Building <span>Communities</span> Through Innovation</h1>
+                    <p>AICODEV Ghana (Alternative Innovations For Community Development) is a non-profit organization based in Wa, Upper West Region, Ghana, focused on community development and research. The organization is dedicated to supporting deprived communities through various interventions, including health education, volunteer training, and social advocacy. 
+</p>
                     
                     <div class="hero-btns">
-                        <a href="#donate" class="btn btn-primary pulse">Donate Now</a>
                         <a href="#about" class="btn btn-outline">Learn More</a>
                     </div>
                     
                     <div class="hero-stats">
-                        <div class="stat-item">
-                            <h3 class="counter" data-target="12500">0</h3>
-                            <p>Lives Impacted</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3 class="counter" data-target="47">0</h3>
-                            <p>Projects Completed</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3 class="counter" data-target="32">0</h3>
-                            <p>Countries Reached</p>
-                        </div>
+                        
                     </div>
                 </div>
                 
                 <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="HopeBridge volunteers helping community">
+                    <img src="homebackground.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -1322,18 +1498,18 @@
         <div class="container">
             <div class="section-title">
                 <h2>Who We Are</h2>
-                <p>HopeBridge is a global non-profit organization committed to creating sustainable change in underserved communities through innovative programs and partnerships.</p>
+                <p>AICODEV Ghana (Alternative Innovations For Community Development) is a non-profit organization based in Wa, Upper West Region, Ghana, focused on community development and research. The organization is dedicated to supporting deprived communities through various interventions, including health education, volunteer training, and social advocacy.</p>
             </div>
             
             <div class="about-content">
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1031&q=80" alt="HopeBridge team">
+                    <img src="aboutimage.jpg" alt="">
                 </div>
                 
                 <div class="about-text">
                     <h3>Our Mission & Vision</h3>
-                    <p>Founded in 2010, HopeBridge works to empower communities by addressing the root causes of poverty and inequality. We believe in a world where every person has the opportunity to thrive.</p>
-                    <p>Our approach combines immediate relief with long-term development strategies, ensuring that our impact is both meaningful and sustainable.</p>
+                    <p>AICODEV Ghana works ‘to Change lives and build communities to have equal access to all Resources and social justice’. </p>
+                    <p>A world of equal rights and access to all services for all </p>
                     
                     <div class="features">
                         <div class="feature">
@@ -1372,7 +1548,7 @@
                             </div>
                             <div>
                                 <h4>Global Reach</h4>
-                                <p>Our programs span across 32 countries on 4 continents.</p>
+                                <p>Our programs span across the Wa West Disrict in the Upper West Region of Ghana.</p>
                             </div>
                         </div>
                     </div>
@@ -1380,157 +1556,236 @@
             </div>
         </div>
     </section>
+
+    
+    <!-- Thermatic Section -->
+    <section class="section causes" id="causes">
+        <div class="container">
+            <div class="section-title">
+                <h2>Thermatic Areas</h2>
+            </div>
+            
+            <div class="causes-grid">
+                <div class="cause-card">
+                    <div class="cause-image">
+                        <img src="Health.jpg" alt="Health">
+                    </div>
+                    <div class="cause-content">
+                        <h3 style="text-align: center;">HEALTH</h3>
+                        <p>Focuses on enhancing well-being through sustainable, equitable systems, covering disease prevention, health service delivery, and workforce development</p>
+                        
+                       
+                    </div>
+                </div>
+                
+                <div class="cause-card">
+                    <div class="cause-image">
+                        <img src="human rights.jpg" alt="Clean water access">
+                    </div>
+                    <div class="cause-content">
+                    <h3 style="text-align: center;">HUMAN RIGHTS</h3>
+                        <p>Involves the universal protection, promotion, and implementation of fundamental freedoms, focusing on dignity, equality, and justice..</p>
+                       
+                    </div>
+                </div>
+                
+                <div class="cause-card">
+                    <div class="cause-image">
+                        <img src="Poverty eradication and Livelihoods Empowerments.jpg" alt="Poverty eradication and Livelihoods Empowerments">
+                    </div>
+                    <div class="cause-content">
+                        <h3 style="text-align: center;">Poverty Eradication and Livelihoods Empowerment</h3>
+                        <p>Poverty eradication and Livelihoods Empowerment constitute a critical, multifaceted thematic area in international development, aimed at shifting vulnerable households from dependency to self-reliance through, capacity building, asset accumulation, and financial inclusion.</p>
+                    </div>
+                </div>
+
+                <div class="cause-card">
+                    <div class="cause-image">
+                        <img src="Education.jpg" alt="Education">
+                    </div>
+                    <div class="cause-content">
+                        <h3 style="text-align: center;">EDUCATION</h3>
+                        <p>Focuses on improving access to quality education, promoting literacy, and ensuring inclusive learning opportunities for all children and adults.</p>
+                    </div>
+                </div>
+
+                <div class="cause-card">
+                    <div class="cause-image">
+                        <img src="Water and Sanitation.jpg" alt="Water and Sanitation">
+                    </div>
+                    <div class="cause-content">
+                        <h3 style="text-align: center;">WATER AND SANITATION</h3>
+                        <p>Water and sanitation is a critical thematic area, aiming for universal access to safe drinking water, sanitation, and hygiene (WASH)</p>
+                    </div>
+                </div>
+
+                <div class="cause-card">
+                    <div class="cause-image">
+                        <img src="Nutrition.jpg" alt="Nutrition">
+                    </div>
+                    <div class="cause-content">
+                        <h3 style="text-align: center;">NUTRITION</h3>
+                        <p>Focuses on improving nutritional outcomes, especially for children and mothers, through targeted interventions and community-based programs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Projects</h2>
+                <p>We implement sustainable projects that create lasting impact in communities.</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Social Behaviour.jpg" alt="Social Behaviour Change Communication to prevent Malaria in pregnancy through increasing IPTp uptake.">
+                        <div class="project-badge">Ongoing</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Social Behaviour Change Communication to prevent Malaria in pregnancy through increasing IPTp uptake</h3>
+                        <p>Social and Behaviour Change Communication (SBCC) for Malaria in Pregnancy (MiP) increases Intermittent Preventive Treatment (IPTp) uptake by influencing knowledge, attitudes, and social norms among pregnant women, families, and health workers. Effective strategies include leveraging community role models, fostering male involvement, and promoting early Antenatal Care (ANC) to ensure at least three doses of SP. </p>
+                    </div>
+                </div>
+
+
+
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Healthy Mothers, Smiling Babies Campaign Project.jpg" alt="Healthy Mothers, Smiling Babies Campaign Project">
+                        <div class="project-badge">Completed</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Healthy Mothers, Smiling Babies Campaign Project</h3>
+                        <p>This task is critical. Tragically, based on currently published estimates, 260 000 women lose their life due to pregnancy or childbirth each year, while over 2 million babies die in their first month of life and around 2 million more are stillborn. That’s roughly 1 preventable death every 7 seconds.
+                           Based on current trends, a staggering 4 out of 5 countries are off track to meet targets for improving maternal survival by 2030. 1 in 3 will fail to meet targets for reducing newborn deaths.
+                           Women and families everywhere need high quality care that supports them physically and emotionally, before, during and after birth.
+                          Health systems must evolve to manage the many health issues that impact maternal and newborn health. These not only include direct obstetric complications but also mental health conditions, noncommunicable diseases and family planning.
+                         </p>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Increasing Covid-19 Vaccine uptake in Ghana.jpg" alt="Increasing Covid-19 Vaccine uptake in Ghana">
+                        <div class="project-badge">Ongoing</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Increasing Covid-19 Vaccine uptake in Ghana</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi adipisci ad numquam aut fugit, illum delectus, optio deleniti labore dolorum, exercitationem odio. Esse dolor quisquam aliquam quidem, expedita corporis necessitatibus!</p>
+                       
+                    </div>
+                </div>
+
+                 <div class="project-card">
+                    <div class="project-image">
+                        <img src="Increasing Immunization coverage in Children less than five years through community advocacy and Mobilization..jpg" alt="Increasing Immunization coverage in Children less than five years through community advocacy and Mobilization.">
+                        <div class="project-badge">Ongoing</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Increasing Immunization coverage in Children less than five years through community advocacy and Mobilization.</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi adipisci ad numquam aut fugit, illum delectus, optio deleniti labore dolorum, exercitationem odio. Esse dolor quisquam aliquam quidem, expedita corporis necessitatibus!</p>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
     <!-- Gallery Section - 2 Columns on all devices -->
     <section class="section gallery" id="gallery">
         <div class="container">
             <div class="section-title">
                 <h2>Impact Gallery</h2>
-                <p>Witness the transformative moments captured from our work across the globe.</p>
+                <p>Witness the transformative moments captured from our work.</p>
             </div>
             
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1540479859555-17af45c78602?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Community education program">
+                    <img src="g1.jpg" alt="">
                     <div class="gallery-overlay">
-                        <h3>Education for All</h3>
-                        <p>Teaching children in rural Kenya</p>
+                        <h3></h3>
+                        <p></p>
                     </div>
                 </div>
                 
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Clean water project">
+                    <img src="g2.jpg" alt="Clean water project">
                     <div class="gallery-overlay">
-                        <h3>Clean Water Access</h3>
-                        <p>New well inauguration in Ghana</p>
+                        <h3></h3>
+                        <p></p>
                     </div>
                 </div>
                 
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Medical camp volunteer">
+                    <img src="g3.jpg" alt="">
                     <div class="gallery-overlay">
-                        <h3>Healthcare Services</h3>
-                        <p>Medical camp in rural India</p>
+                        <h3></h3>
+                        <p></p>
                     </div>
                 </div>
                 
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Children learning">
+                    <img src="g4.jpg" alt="">
                     <div class="gallery-overlay">
-                        <h3>School Construction</h3>
-                        <p>New school building in Nepal</p>
+                        <h3></h3>
+                        <p></p>
                     </div>
                 </div>
                 
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1516549655669-df6654e435f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Environmental cleanup">
+                    <img src="g5.jpg" alt="">
                     <div class="gallery-overlay">
-                        <h3>Environmental Care</h3>
-                        <p>Community cleanup in Philippines</p>
+                        <h3></h3>
+                        <p></p>
                     </div>
                 </div>
                 
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Building homes">
+                    <img src="g6.jpg" alt="">
                     <div class="gallery-overlay">
-                        <h3>Home Building</h3>
-                        <p>Constructing homes in Haiti</p>
+                        <h3></h3>
+                        <p></p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section class="section" id="projects">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Projects</h2>
-                <p>We implement sustainable projects that create lasting impact in communities worldwide.</p>
-            </div>
-            
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Education project">
-                        <div class="project-badge">Ongoing</div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Bright Future Schools</h3>
-                        <p>Building and equipping schools in underserved communities across Sub-Saharan Africa.</p>
-                        
-                        <div class="project-stats">
-                            <div class="project-stat">
-                                <h4 class="counter" data-target="15">0</h4>
-                                <p>Schools Built</p>
-                            </div>
-                            <div class="project-stat">
-                                <h4 class="counter" data-target="3200">0</h4>
-                                <p>Students Enrolled</p>
-                            </div>
-                            <div class="project-stat">
-                                <h4 class="counter" data-target="85">0</h4>
-                                <p>Teachers Trained</p>
-                            </div>
-                        </div>
-                        
-                        <a href="#" class="btn btn-primary">Learn More</a>
+                <div class="gallery-item">
+                    <img src="g7.jpg" alt="">
+                    <div class="gallery-overlay">
+                        <h3></h3>
+                        <p></p>
                     </div>
                 </div>
-                
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1516549655669-df6654e435f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Water project">
-                        <div class="project-badge">Completed</div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Clean Water Initiative</h3>
-                        <p>Providing access to clean drinking water through wells and purification systems in rural areas.</p>
-                        
-                        <div class="project-stats">
-                            <div class="project-stat">
-                                <h4 class="counter" data-target="42">0</h4>
-                                <p>Wells Installed</p>
-                            </div>
-                            <div class="project-stat">
-                                <h4 class="counter" data-target="12500">0</h4>
-                                <p>People Served</p>
-                            </div>
-                            <div class="project-stat">
-                                <h4 class="counter" data-target="18">0</h4>
-                                <p>Communities</p>
-                            </div>
-                        </div>
-                        
-                        <a href="#" class="btn btn-primary">Learn More</a>
+
+                <div class="gallery-item">
+                    <img src="g8.jpg" alt="">
+                    <div class="gallery-overlay">
+                        <h3></h3>
+                        <p></p>
                     </div>
                 </div>
-                
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Healthcare project">
-                        <div class="project-badge">Ongoing</div>
+
+                <div class="gallery-item">
+                    <img src="g9.jpg" alt="">
+                    <div class="gallery-overlay">
+                        <h3></h3>
+                        <p></p>
                     </div>
-                    <div class="project-content">
-                        <h3>Community Health Program</h3>
-                        <p>Establishing medical clinics and providing healthcare services in remote regions.</p>
-                        
-                        <div class="project-stats">
-                            <div class="project-stat">
-                                <h4 class="counter" data-target="8">0</h4>
-                                <p>Clinics Established</p>
-                            </div>
-                            <div class="project-stat">
-                                <h4 class="counter" data-target="47500">0</h4>
-                                <p>Patients Treated</p>
-                            </div>
-                            <div class="project-stat">
-                                <h4 class="counter" data-target="12">0</h4>
-                                <p>Medical Camps</p>
-                            </div>
-                        </div>
-                        
-                        <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="g10.jpg" alt="">
+                    <div class="gallery-overlay">
+                        <h3></h3>
+                        <p></p>
                     </div>
                 </div>
             </div>
@@ -1548,231 +1803,61 @@
             <div class="team-grid">
                 <div class="team-member">
                     <div class="member-image">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sarah Johnson">
+                        <img src="Yilob Andrew Embireh.jpg" alt="Yilob Andrew Embireh">
                     </div>
                     <div class="member-info">
-                        <h3>Sarah Johnson</h3>
+                        <h3>Yilob Andrew Embireh</h3>
                         <p>Executive Director</p>
-                        <p class="bio">With 15+ years in non-profit leadership, Sarah drives our strategic vision and global partnerships.</p>
+                        <p class="bio">With 15+ years in non-profit leadership, Yilob Andrew Embireh drives our strategic vision and global partnerships.</p>
                         <div class="member-social">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fas fa-envelope"></i></a>
+                            <a href="https://www.facebook.com/achireh" class="social-icon" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.linkedin.com/in/andrew-yilob-embireh-58790244?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="social-icon" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://wa.me/233541237088" class="social-icon whatsapp-icon" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+</a>
+                </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w-800&q=80" alt="Michael Chen">
-                    </div>
-                    <div class="member-info">
-                        <h3>Michael Chen</h3>
-                        <p>Program Director</p>
-                        <p class="bio">Michael oversees all field operations and ensures our projects deliver maximum impact.</p>
-                        <div class="member-social">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Amina Diallo">
-                    </div>
-                    <div class="member-info">
-                        <h3>Amina Diallo</h3>
-                        <p>Community Relations Lead</p>
-                        <p class="bio">Amina builds relationships with local communities and ensures cultural sensitivity in all our work.</p>
-                        <div class="member-social">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="David Rodriguez">
-                    </div>
-                    <div class="member-info">
-                        <h3>David Rodriguez</h3>
-                        <p>Finance Director</p>
-                        <p class="bio">David manages our financial resources to ensure transparency and maximize donor impact.</p>
-                        <div class="member-social">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                </div>               
     </section>
 
-    <!-- Causes Section -->
-    <section class="section causes" id="causes">
-        <div class="container">
-            <div class="section-title">
-                <h2>Support Our Causes</h2>
-                <p>Your donations directly fund these critical initiatives that transform lives and communities.</p>
-            </div>
-            
-            <div class="causes-grid">
-                <div class="cause-card">
-                    <div class="cause-image">
-                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Education for children">
-                    </div>
-                    <div class="cause-content">
-                        <h3>Education for All</h3>
-                        <p>Building schools, training teachers, and providing educational materials to children in underserved communities.</p>
-                        
-                        <div class="progress-bar">
-                            <div class="progress" data-width="75"></div>
-                        </div>
-                        
-                        <div class="cause-stats">
-                            <span>Raised: $187,500</span>
-                            <span>Goal: $250,000</span>
-                        </div>
-                        
-                        <a href="#donate" class="btn btn-primary">Support This Cause</a>
-                    </div>
-                </div>
-                
-                <div class="cause-card">
-                    <div class="cause-image">
-                        <img src="https://images.unsplash.com/photo-1516549655669-df6654e435f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Clean water access">
-                    </div>
-                    <div class="cause-content">
-                        <h3>Clean Water Access</h3>
-                        <p>Installing wells and water purification systems in communities lacking clean drinking water.</p>
-                        
-                        <div class="progress-bar">
-                            <div class="progress" data-width="60"></div>
-                        </div>
-                        
-                        <div class="cause-stats">
-                            <span>Raised: $120,000</span>
-                            <span>Goal: $200,000</span>
-                        </div>
-                        
-                        <a href="#donate" class="btn btn-primary">Support This Cause</a>
-                    </div>
-                </div>
-                
-                <div class="cause-card">
-                    <div class="cause-image">
-                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Healthcare services">
-                    </div>
-                    <div class="cause-content">
-                        <h3>Healthcare & Medicine</h3>
-                        <p>Providing medical care, vaccinations, and health education to vulnerable populations.</p>
-                        
-                        <div class="progress-bar">
-                            <div class="progress" data-width="90"></div>
-                        </div>
-                        
-                        <div class="cause-stats">
-                            <span>Raised: $270,000</span>
-                            <span>Goal: $300,000</span>
-                        </div>
-                        
-                        <a href="#donate" class="btn btn-primary">Support This Cause</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
-    <!-- Live Photo Moments Section -->
-    <section class="section live-photo-section" id="moments">
-        <div class="container">
-            <div class="section-title">
-                <h2>Moments of Hope</h2>
-                <p>Experience the real moments of impact from our work in the field.</p>
-            </div>
+    
+    <!-- Google Map Section - Standalone -->
+<section class="map-section">
+    <div class="container">
+        <div class="map-container">
+            <!-- Replace with your actual Google Maps embed code -->
+            <iframe 
+                 src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d704.6475275700788!2d-2.506458130550229!3d10.047039919918072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDAyJzQ5LjMiTiAywrAzMCcyMC45Ilc!5e1!3m2!1sen!2sgh!4v1770581703239!5m2!1sen!2sgh" width=100% height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">  
+            </iframe>
             
-            <div class="video-grid">
-                <div class="video-card">
-                    <video loop muted playsinline autoplay>
-                        <source src="https://assets.mixkit.co/videos/preview/mixkit-group-of-friends-partying-happily-4640-large.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="video-caption">
-                        <p>Clean water celebration in Ghana</p>
-                    </div>
-                </div>
-                
-                <div class="video-card">
-                    <video loop muted playsinline autoplay>
-                        <source src="https://assets.mixkit.co/videos/preview/mixkit-students-and-teacher-in-a-school-classroom-48039-large.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="video-caption">
-                        <p>School opening ceremony in Nepal</p>
-                    </div>
-                </div>
-                
-                <div class="video-card">
-                    <video loop muted playsinline autoplay>
-                        <source src="https://assets.mixkit.co/videos/preview/mixkit-nurse-measuring-the-blood-pressure-of-a-patient-43363-large.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="video-caption">
-                        <p>Medical camp in rural India</p>
-                    </div>
-                </div>
-            </div>
         </div>
-    </section>
-
-    <!-- Donation CTA -->
-    <section class="donation-cta" id="donate">
-        <div class="container">
-            <h2>Make a Difference Today</h2>
-            <p>Your donation, no matter the size, helps us create lasting change in communities around the world. 100% of your contribution goes directly to our programs.</p>
-            
-            <div class="donation-form">
-                <div class="donation-options">
-                    <div class="donation-option" data-amount="25">$25</div>
-                    <div class="donation-option" data-amount="50">$50</div>
-                    <div class="donation-option active" data-amount="100">$100</div>
-                    <div class="donation-option" data-amount="250">$250</div>
-                    <div class="donation-option" data-amount="500">$500</div>
-                </div>
-                
-                <div class="donation-input">
-                    <input type="number" id="customAmount" placeholder="Or enter custom amount" min="1" value="100">
-                </div>
-                
-                <button class="btn btn-secondary btn-block" id="donateBtn">Donate Now</button>
-                
-                <p style="text-align: center; margin-top: 15px; color: var(--gray); font-size: 0.9rem;">
-                    <i class="fas fa-lock"></i> Your donation is secure and tax-deductible
-                </p>
-            </div>
-        </div>
-    </section>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer id="contact">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>HopeBridge</h3>
-                    <p>Creating lasting change through community empowerment, education, and sustainable development since 2010.</p>
+                    <h3>AICODEV</h3>
+                    <p>Building Communities Through Innovation</p>
                     
-                    <div class="social-icons">
-                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
-                    </div>
+                   <div class="social-icons">
+               <!-- Add this with your other social media icons -->
+<a href="https://www.facebook.com/aicodev.ghana" class="social-icon" target="_blank" rel="noopener noreferrer" title="Facebook">
+    <i class="fab fa-facebook-f"></i>
+</a>
+<a href="https://www.linkedin.com/company/aicodev-ghana/" class="social-icon" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+    <i class="fab fa-linkedin-in"></i>
+</a>
+<!-- WhatsApp Link - REPLACE 1234567890 with your actual phone number -->
+<a href="https://wa.me/233541237088" class="social-icon whatsapp-icon" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+                </div>
                 </div>
                 
                 <div class="footer-column">
@@ -1780,21 +1865,19 @@
                     <ul class="footer-links">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About Us</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
                         <li><a href="#projects">Projects</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
                         <li><a href="#team">Team</a></li>
                         <li><a href="#causes">Our Causes</a></li>
-                        <li><a href="#donate">Donate</a></li>
-                        <li><a href="#">Volunteer</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
                     <h3>Contact Info</h3>
                     <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Charity Ave, Hope City, HC 10001</li>
-                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-                        <li><i class="fas fa-envelope"></i> info@hopebridge.org</li>
+                        <li><i class="fas fa-map-marker-alt"></i>WA West</li>
+                        <li><i class="fas fa-phone"></i> +233 (54) 123-7088</li>
+                        <li><i class="fas fa-envelope"></i> aicodev@gmail.com</li>
                     </ul>
                 </div>
                 
@@ -1809,7 +1892,7 @@
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 HopeBridge. All rights reserved. | <a href="#" style="color: rgba(255, 255, 255, 0.7);">Privacy Policy</a> | <a href="#" style="color: rgba(255, 255, 255, 0.7);">Terms of Service</a></p>
+                <p>&copy; 2026 AICODEV. All rights reserved. | <a href="#" style="color: rgba(255, 255, 255, 0.7);">Privacy Policy</a> | <a href="#" style="color: rgba(255, 255, 255, 0.7);">Terms of Service</a></p>
             </div>
         </div>
     </footer>
