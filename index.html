@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AICODEV</title>
+    <title>AICODEV - Building Communities Through Innovation</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     
@@ -11,9 +11,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
 
-    <!--Favicon-->
-      <link rel="icon" href="Logo.jpg" type="image/x-icon">
-
+    <!-- Favicon -->
+    <link rel="icon" href="Logo.jpg" type="image/x-icon">
     
     <style>
         :root {
@@ -105,7 +104,7 @@
             transform: translateY(-3px);
         }
 
-        /* Header & Navigation */
+        /* ===== HEADER & NAVIGATION ===== */
         header {
             position: fixed;
             top: 0;
@@ -115,8 +114,8 @@
             padding: 20px 0;
             transition: var(--transition);
             background-color: rgba(255, 255, 255, 0.95);
-            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
         }
 
@@ -131,27 +130,22 @@
             align-items: center;
         }
 
+        /* Logo Styling */
         .logo {
             display: flex;
             align-items: center;
             text-decoration: none;
         }
 
-        .logo-icon {
-            font-size: 2.2rem;
-            color: var(--primary);
-            margin-right: 10px;
+        .logo-img {
+            height: 45px;
+            width: auto;
+            transition: all 0.3s ease;
         }
 
-        .logo-text {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--dark);
-        }
-
-        .logo-text span {
-            color: var(--primary);
+        .logo-img:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
         }
 
         .nav-links {
@@ -196,6 +190,32 @@
             align-items: center;
         }
 
+        /* Header Social Icons */
+        .header-social {
+            display: flex;
+            gap: 12px;
+            margin-left: 20px;
+        }
+
+        .header-social a {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: rgba(42, 157, 143, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .header-social a:hover {
+            background-color: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
         .mobile-menu-btn {
             display: none;
             background: none;
@@ -203,9 +223,10 @@
             font-size: 1.5rem;
             color: var(--dark);
             cursor: pointer;
+            padding: 5px;
         }
 
-        /* Hero Section with Vanta.js background */
+        /* ===== HERO SECTION ===== */
         .hero {
             padding: 180px 0 120px;
             position: relative;
@@ -239,7 +260,6 @@
             font-size: 3.2rem;
             margin-bottom: 20px;
             color: var(--dark);
-            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.8);
         }
 
         .hero-text h1 span {
@@ -250,7 +270,7 @@
             font-size: 1.2rem;
             margin-bottom: 30px;
             color: var(--dark);
-            text-shadow: 0 1px 5px rgba(255, 255, 255, 0.8);
+            line-height: 1.7;
         }
 
         .hero-btns {
@@ -258,8 +278,6 @@
             gap: 15px;
             margin-bottom: 40px;
         }
-
-       
 
         .hero-image {
             flex: 1;
@@ -280,152 +298,7 @@
             transform: perspective(1000px) rotateY(0deg);
         }
 
-        /* Header Social Icons */
-.header-social {
-    display: flex;
-    gap: 12px;
-    margin-left: 20px;
-}
-
-.header-social a {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background-color: rgba(42, 157, 143, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--primary);
-    text-decoration: none;
-    transition: var(--transition);
-}
-
-.header-social a:hover {
-    background-color: var(--primary);
-    color: white;
-    transform: translateY(-3px);
-}
-
-/* Map Section - Standalone */
-.map-section {
-    padding: 0;
-    background: #f8f9fa;
-}
-
-.map-container {
-    position: relative;
-    width: 100%;
-    height: 500px;
-    border-radius: 0;
-    overflow: hidden;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-}
-
-.google-map {
-    width: 100%;
-    height: 100%;
-    border: none;
-    filter: grayscale(20%) contrast(1.1);
-    transition: filter 0.3s ease;
-}
-
-.google-map:hover {
-    filter: grayscale(0%) contrast(1);
-}
-
-/* Map Overlay Info Card */
-.map-overlay {
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    z-index: 100;
-}
-
-.map-info-card {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    max-width: 300px;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    animation: slideInLeft 0.8s ease-out;
-}
-
-.map-info-card h3 {
-    color: var(--primary);
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.map-info-card p {
-    color: var(--dark);
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
-
-.map-contact-info {
-    margin-top: 15px;
-    padding-top: 15px;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.map-contact-info p {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--gray);
-    font-size: 0.9rem;
-    margin-bottom: 8px;
-}
-
-.map-contact-info i {
-    color: var(--primary);
-    width: 16px;
-}
-
-/* Responsive Map */
-@media (max-width: 768px) {
-    .map-container {
-        height: 400px;
-    }
-    
-    .map-overlay {
-        position: relative;
-        top: 0;
-        left: 0;
-        padding: 20px;
-    }
-    
-    .map-info-card {
-        max-width: 100%;
-        margin-top: 0;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
-}
-
-@media (max-width: 480px) {
-    .map-container {
-        height: 350px;
-    }
-    
-    .map-info-card {
-        padding: 20px;
-    }
-}
-
-/* Mobile responsive */
-@media (max-width: 768px) {
-    .header-social {
-        display: none;
-    }
-}
-
-        /* About Section */
+        /* ===== ABOUT SECTION ===== */
         .section {
             padding: 100px 0;
         }
@@ -445,6 +318,8 @@
             color: var(--gray);
             max-width: 700px;
             margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
         }
 
         .about-content {
@@ -485,6 +360,7 @@
         .about-text p {
             margin-bottom: 20px;
             color: var(--gray);
+            line-height: 1.7;
         }
 
         .features {
@@ -513,7 +389,7 @@
             flex-shrink: 0;
         }
 
-        /* Gallery Section - 2 Columns on all devices */
+        /* ===== GALLERY SECTION ===== */
         .gallery {
             background-color: var(--light);
         }
@@ -572,7 +448,7 @@
             opacity: 0.9;
         }
 
-        /* Projects Section */
+        /* ===== PROJECTS SECTION ===== */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -635,296 +511,258 @@
         .project-content p {
             color: var(--gray);
             margin-bottom: 20px;
+            line-height: 1.6;
         }
 
-        .project-stats {
+        /* ===== THEMATIC AREAS SECTION ===== */
+        .causes {
+            background-color: var(--light);
+            padding: 60px 0;
+        }
+
+        .causes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .cause-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            height: 320px;
             display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
+            flex-direction: column;
+            border: 1px solid rgba(0, 0, 0, 0.05);
         }
 
-        .project-stat {
+        .cause-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+            border-color: rgba(42, 157, 143, 0.2);
+        }
+
+        .cause-image {
+            height: 130px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .cause-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .cause-card:hover .cause-image img {
+            transform: scale(1.05);
+        }
+
+        .cause-content {
+            padding: 15px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cause-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--dark);
+            line-height: 1.3;
             text-align: center;
         }
 
-        .project-stat h4 {
-            font-size: 1.8rem;
-            color: var(--primary);
-            margin-bottom: 5px;
-        }
-
-        .project-stat p {
-            font-size: 0.85rem;
+        .cause-content p {
             color: var(--gray);
-            margin: 0;
+            font-size: 0.85rem;
+            line-height: 1.4;
+            margin-bottom: 12px;
+            flex-grow: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
 
-        /* Team Section */
+        /* ===== TEAM SECTION ===== */
         .team {
-    background-color: var(--light);
-}
+            background-color: var(--light);
+        }
 
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
 
-.team-member {
-    background-color: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-    animation: fadeInUp 0.8s ease-out;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
+        .team-member {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            animation: fadeInUp 0.8s ease-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
 
-.team-member:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
 
-.member-image-container {
-    width: 100%;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    margin-bottom: 10px;
-    position: relative;
-}
+        .member-image {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            margin: 30px 0 20px;
+        }
 
-/* Passport-style circular photo */
-.member-image {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 5px solid white;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 2;
-}
+        .member-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
 
-.member-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: var(--transition);
-}
+        .team-member:hover .member-image img {
+            transform: scale(1.1);
+        }
 
-/* Decorative background element */
-.member-image-container::before {
-    content: '';
-    position: absolute;
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-    opacity: 0.1;
-    z-index: 1;
-}
+        .member-info {
+            padding: 0 25px 25px;
+            text-align: center;
+            width: 100%;
+        }
 
-.team-member:hover .member-image img {
-    transform: scale(1.1);
-}
+        .member-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            color: var(--dark);
+        }
 
-.member-info {
-    padding: 25px;
-    padding-top: 0;
-    text-align: center;
-    width: 100%;
-}
+        .member-info .position {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            display: block;
+        }
 
-.member-info h3 {
-    font-size: 1.4rem;
-    margin-bottom: 8px;
-    color: var(--dark);
-}
+        .member-info .bio {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
 
-.member-info .position {
-    color: var(--primary);
-    font-weight: 600;
-    font-size: 1rem;
-    margin-bottom: 15px;
-    display: block;
-}
+        .member-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
 
-.member-info .bio {
-    color: var(--gray);
-    font-size: 0.95rem;
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
+        .member-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(42, 157, 143, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 1rem;
+        }
 
-.member-social {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 15px;
-}
+        .member-social a:hover {
+            background-color: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(42, 157, 143, 0.3);
+        }
 
-.member-social a {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: rgba(42, 157, 143, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--primary);
-    text-decoration: none;
-    transition: var(--transition);
-    font-size: 1rem;
-}
+        /* ===== MAP SECTION ===== */
+        .map-section {
+            padding: 0;
+            background: #f8f9fa;
+        }
 
-.member-social a:hover {
-    background-color: var(--primary);
-    color: white;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(42, 157, 143, 0.3);
-}
+        .map-container {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            border-radius: 0;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+        }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .team-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-    }
-    
-    .member-image {
-        width: 140px;
-        height: 140px;
-    }
-    
-    .member-image-container {
-        height: 180px;
-    }
-    
-    .member-info {
-        padding: 20px;
-        padding-top: 0;
-    }
-}
+        .google-map {
+            width: 100%;
+            height: 100%;
+            border: none;
+            filter: grayscale(20%) contrast(1.1);
+            transition: filter 0.3s ease;
+        }
 
-@media (max-width: 480px) {
-    .team-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .member-image {
-        width: 120px;
-        height: 120px;
-    }
-    
-    .member-image-container {
-        height: 160px;
-    }
-}
-        /* Causes Section */
-      .causes {
-    background-color: var(--light);
-    padding: 60px 0; /* Reduced section padding */
-}
+        .google-map:hover {
+            filter: grayscale(0%) contrast(1);
+        }
 
-.causes-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
-}
-
-/* Compact Card Design */
-.cause-card {
-    background-color: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    transition: all 0.3s ease;
-    height: 320px; /* Much more compact */
-    display: flex;
-    flex-direction: column;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.cause-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-    border-color: rgba(42, 157, 143, 0.2);
-}
-
-/* Small Image */
-.cause-image {
-    height: 130px;
-    overflow: hidden;
-    position: relative;
-}
-
-.cause-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.cause-card:hover .cause-image img {
-    transform: scale(1.05);
-}
-
-/* Category Badge */
-.cause-category {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: var(--primary);
-    color: white;
-    padding: 4px 10px;
-    border-radius: 12px;
-    font-size: 0.7rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-/* Compact Content */
-.cause-content {
-    padding: 15px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.cause-content h3 {
-    font-size: 1.1rem;
-    margin-bottom: 8px;
-    color: var(--dark);
-    line-height: 1.3;
-}
-
-.cause-content p {
-    color: var(--gray);
-    font-size: 0.85rem;
-    line-height: 1.4;
-    margin-bottom: 12px;
-    flex-grow: 1;
-    display: -webkit-box;
-    -webkit-line-clamp: 2; /* Limits to 2 lines */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-
-        
-
-        /* Footer */
+        /* ===== FOOTER ===== */
         footer {
             background-color: var(--dark);
             color: white;
-            padding: 80px 0 30px;
+            padding: 60px 0 30px;
+        }
+
+        .sponsors-section {
+            background: rgba(255,255,255,0.03);
+            padding: 15px 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .sponsors-title {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .sponsors-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .sponsor-logo {
+            width: 50px;
+            height: 50px;
+            opacity: 0.7;
+            transition: all 0.3s ease;
+            object-fit: contain;
+        }
+
+        .sponsor-logo:hover {
+            opacity: 1;
+            transform: scale(1.1);
         }
 
         .footer-content {
@@ -943,6 +781,7 @@
         .footer-column p {
             color: rgba(255, 255, 255, 0.7);
             margin-bottom: 20px;
+            line-height: 1.6;
         }
 
         .footer-links {
@@ -951,6 +790,9 @@
 
         .footer-links li {
             margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
         .footer-links a {
@@ -962,6 +804,11 @@
         .footer-links a:hover {
             color: white;
             padding-left: 5px;
+        }
+
+        .footer-links i {
+            width: 20px;
+            color: var(--primary);
         }
 
         .social-icons {
@@ -996,7 +843,17 @@
             font-size: 0.9rem;
         }
 
-        /* Animations */
+        .copyright a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .copyright a:hover {
+            color: white;
+        }
+
+        /* ===== ANIMATIONS ===== */
         @keyframes fadeInLeft {
             from {
                 opacity: 0;
@@ -1046,20 +903,7 @@
             animation: pulse 2s infinite;
         }
 
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        .float {
-            animation: float 3s ease-in-out infinite;
-        }
-
-        /* Responsive Design */
+        /* ===== MOBILE RESPONSIVE DESIGN ===== */
         @media (max-width: 1200px) {
             .container {
                 max-width: 960px;
@@ -1095,6 +939,10 @@
             .gallery-item {
                 height: 250px;
             }
+            
+            .logo-img {
+                height: 38px;
+            }
         }
 
         @media (max-width: 768px) {
@@ -1102,7 +950,8 @@
                 max-width: 540px;
             }
             
-            .nav-links, .nav-cta {
+            /* Navigation */
+            .nav-links, .nav-cta, .header-social {
                 display: none;
             }
             
@@ -1110,6 +959,7 @@
                 display: block;
             }
             
+            /* Hero Section */
             .hero {
                 padding: 150px 0 80px;
             }
@@ -1123,12 +973,16 @@
                 align-items: flex-start;
             }
             
+            .hero-text p {
+                font-size: 1.1rem;
+            }
             
-            
+            /* Sections */
             .section {
                 padding: 70px 0;
             }
             
+            /* Gallery */
             .gallery-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 15px;
@@ -1146,14 +1000,34 @@
                 font-size: 1.2rem;
             }
             
+            /* Grid Layouts */
             .projects-grid,
             .causes-grid,
             .team-grid {
                 grid-template-columns: 1fr;
             }
             
-            .video-grid {
-                grid-template-columns: 1fr;
+            /* Logo */
+            .logo-img {
+                height: 35px;
+            }
+            
+            /* Map */
+            .map-container {
+                height: 400px;
+            }
+            
+            /* Team */
+            .member-image {
+                width: 140px;
+                height: 140px;
+                margin: 20px 0 15px;
+            }
+            
+            /* Sponsors */
+            .sponsor-logo {
+                width: 45px;
+                height: 45px;
             }
         }
 
@@ -1169,8 +1043,6 @@
             .section-title h2 {
                 font-size: 1.8rem;
             }
-            
-         
             
             .gallery-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -1194,12 +1066,13 @@
                 font-size: 0.8rem;
             }
             
-            .project-stat h4 {
-                font-size: 1.5rem;
+            .btn {
+                padding: 12px 25px;
+                font-size: 0.95rem;
             }
             
-            .member-image {
-                height: 220px;
+            .logo-img {
+                height: 30px;
             }
         }
 
@@ -1213,39 +1086,82 @@
                 height: 160px;
             }
             
-
-            
-            .btn {
-                padding: 12px 25px;
-                font-size: 0.95rem;
+            .hero-text h1 {
+                font-size: 1.8rem;
             }
             
-            .donation-option {
-                padding: 10px 20px;
-                font-size: 0.9rem;
+            .section-title h2 {
+                font-size: 1.6rem;
+            }
+            
+            .map-container {
+                height: 350px;
+            }
+            
+            .member-image {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .sponsor-logo {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .sponsors-grid {
+                gap: 10px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                text-align: center;
+            }
+            
+            .footer-links li {
+                justify-content: center;
+            }
+            
+            .social-icons {
+                justify-content: center;
             }
         }
 
         @media (max-width: 360px) {
             .gallery-grid {
                 grid-template-columns: 1fr;
-                gap: 15px;
             }
             
             .gallery-item {
                 height: 200px;
             }
             
-            .logo-text {
-                font-size: 1.5rem;
+            .hero-text h1 {
+                font-size: 1.6rem;
             }
             
-            .hero-text h1 {
-                font-size: 1.8rem;
+            .section-title h2 {
+                font-size: 1.4rem;
+            }
+            
+            .container {
+                padding: 0 10px;
+            }
+            
+            .hero {
+                padding: 140px 0 60px;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+            
+            .logo-img {
+                height: 28px;
             }
         }
 
-        /* Mobile Menu */
+        /* ===== MOBILE MENU ===== */
         .mobile-menu {
             position: fixed;
             top: 0;
@@ -1277,6 +1193,7 @@
             font-size: 1.5rem;
             color: var(--dark);
             cursor: pointer;
+            padding: 5px;
         }
 
         .mobile-nav-links {
@@ -1317,57 +1234,6 @@
             opacity: 1;
             visibility: visible;
         }
-
-        /* Logo Image Styling */
-.logo-img {
-    height: 45px;
-    width: auto;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-}
-
-.logo-img:hover {
-    transform: scale(1.05);
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
-    opacity: 0.95;
-}
-
-/* Different sizes for different sections */
-.logo-img.navbar {
-    height: 40px;
-}
-
-.logo-img.footer {
-    height: 50px;
-    filter: brightness(0) invert(1); /* Makes white for dark footer */
-}
-
-/* Responsive sizes */
-@media (max-width: 992px) {
-    .logo-img {
-        height: 38px;
-    }
-}
-
-@media (max-width: 768px) {
-    .logo-img {
-        height: 35px;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo-img {
-        height: 30px;
-    }
-}
-
-@media (max-width: 360px) {
-    .logo-img {
-        height: 28px;
-    }
-}
-
-
     </style>
 </head>
 <body>
@@ -1375,43 +1241,35 @@
     <header id="header">
         <div class="container">
             <nav class="navbar">
-                <a href="#" class="logo">
-                    
-                    <div class="logo-text">AICO<span>DEV</span></div>
-                    <a href="#home" class="logo">
-    <img src="Logo.jpg" alt="AICODEV Logo" class="logo-img">
-</a>
+                <a href="#home" class="logo">
+                    <img src="Logo.jpg" alt="AICODEV Logo" class="logo-img">
                 </a>
                 
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#causes">Causes</a></li>
+                    <li><a href="#causes">Thematic Areas</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#team">Team</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 
+                <div class="header-social">
+                    <a href="https://www.facebook.com/aicodev.ghana" target="_blank" rel="noopener noreferrer" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/aicodev-ghana/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/233541237088" target="_blank" rel="noopener noreferrer" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
                 
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
                     <i class="fas fa-bars"></i>
                 </button>
-
-                <!-- Add this inside the .nav-cta div -->
-<div class="header-social">
-    <!-- Add this with your other social media icons -->
-<a href="https://www.facebook.com/aicodev.ghana" class="social-icon" target="_blank" rel="noopener noreferrer" title="Facebook">
-    <i class="fab fa-facebook-f"></i>
-</a>
-<a href="https://www.linkedin.com/company/aicodev-ghana/" class="social-icon" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-    <i class="fab fa-linkedin-in"></i>
-</a>
-<!-- WhatsApp Link - REPLACE 1234567890 with your actual phone number -->
-<a href="https://wa.me/233541237088" class="social-icon whatsapp-icon" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-</a>
-</div>
             </nav>
         </div>
     </header>
@@ -1420,10 +1278,9 @@
     <div class="overlay" id="overlay"></div>
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu-header">
-            <div class="logo">
-                <i class="fas fa-hands-helping logo-icon"></i>
-                <div class="logo-text">AICO<span>DEV</span></div>
-            </div>
+            <a href="#home" class="logo">
+                <img src="Logo.jpg" alt="AICODEV Logo" class="logo-img" style="height: 35px;">
+            </a>
             <button class="close-menu" id="closeMenu" type="button" aria-label="Close menu">
                 <i class="fas fa-times"></i>
             </button>
@@ -1432,36 +1289,42 @@
         <ul class="mobile-nav-links">
             <li><a href="#home" class="mobile-nav-link">Home</a></li>
             <li><a href="#about" class="mobile-nav-link">About</a></li>
-             <li><a href="#causes" class="mobile-nav-link">Causes</a></li>
+            <li><a href="#causes" class="mobile-nav-link">Thematic Areas</a></li>
             <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
             <li><a href="#gallery" class="mobile-nav-link">Gallery</a></li>
             <li><a href="#team" class="mobile-nav-link">Team</a></li>
             <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
         </ul>
         
+        <div class="mobile-social" style="display: flex; gap: 15px; justify-content: center; margin-top: 30px;">
+            <a href="https://www.facebook.com/aicodev.ghana" target="_blank" rel="noopener noreferrer" title="Facebook" style="width: 40px; height: 40px; background: rgba(42, 157, 143, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary);">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/aicodev-ghana/" target="_blank" rel="noopener noreferrer" title="LinkedIn" style="width: 40px; height: 40px; background: rgba(42, 157, 143, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary);">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://wa.me/233541237088" target="_blank" rel="noopener noreferrer" title="WhatsApp" style="width: 40px; height: 40px; background: rgba(42, 157, 143, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary);">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
     </div>
 
-    <!-- Hero Section with Vanta.js Background -->
+    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="vanta-bg" id="vanta-bg"></div>
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
                     <h1>Building <span>Communities</span> Through Innovation</h1>
-                    <p>AICODEV Ghana (Alternative Innovations For Community Development) is a non-profit organization based in Wa, Upper West Region, Ghana, focused on community development and research. The organization is dedicated to supporting deprived communities through various interventions, including health education, volunteer training, and social advocacy. 
-</p>
+                    <p>AICODEV Ghana (Alternative Innovations For Community Development) is a non-profit organization based in Wa, Upper West Region, Ghana, focused on community development and research. The organization is dedicated to supporting deprived communities through various interventions, including health education, volunteer training, and social advocacy.</p>
                     
                     <div class="hero-btns">
                         <a href="#about" class="btn btn-outline">Learn More</a>
                     </div>
-                    
-                    <div class="hero-stats">
-                        
-                    </div>
                 </div>
                 
                 <div class="hero-image">
-                    <img src="homebackground.jpg" alt="">
+                    <img src="homebackground.jpg" alt="AICODEV Community Work">
                 </div>
             </div>
         </div>
@@ -1477,13 +1340,13 @@
             
             <div class="about-content">
                 <div class="about-image">
-                    <img src="aboutimage.jpg" alt="">
+                    <img src="aboutimage.jpg" alt="AICODEV Team">
                 </div>
                 
                 <div class="about-text">
                     <h3>Our Mission & Vision</h3>
-                    <p>AICODEV Ghana works ‘to Change lives and build communities to have equal access to all Resources and social justice’. </p>
-                    <p>A world of equal rights and access to all services for all </p>
+                    <p>AICODEV Ghana works 'to Change lives and build communities to have equal access to all Resources and social justice'.</p>
+                    <p>A world of equal rights and access to all services for all.</p>
                     
                     <div class="features">
                         <div class="feature">
@@ -1522,7 +1385,7 @@
                             </div>
                             <div>
                                 <h4>Global Reach</h4>
-                                <p>Our programs span across the Wa West Disrict in the Upper West Region of Ghana.</p>
+                                <p>Our programs span across the Wa West District in the Upper West Region of Ghana.</p>
                             </div>
                         </div>
                     </div>
@@ -1531,12 +1394,11 @@
         </div>
     </section>
 
-    
-    <!-- Thermatic Section -->
+    <!-- Thematic Areas Section -->
     <section class="section causes" id="causes">
         <div class="container">
             <div class="section-title">
-                <h2>Thermatic Areas</h2>
+                <h2>Thematic Areas</h2>
             </div>
             
             <div class="causes-grid">
@@ -1545,31 +1407,28 @@
                         <img src="Health.jpg" alt="Health">
                     </div>
                     <div class="cause-content">
-                        <h3 style="text-align: center;">HEALTH</h3>
-                        <p>Focuses on enhancing well-being through sustainable, equitable systems, covering disease prevention, health service delivery, and workforce development</p>
-                        
-                       
+                        <h3>HEALTH</h3>
+                        <p>Focuses on enhancing well-being through sustainable, equitable systems, covering disease prevention, health service delivery, and workforce development.</p>
                     </div>
                 </div>
                 
                 <div class="cause-card">
                     <div class="cause-image">
-                        <img src="human rights.jpg" alt="Clean water access">
+                        <img src="human rights.jpg" alt="Human Rights">
                     </div>
                     <div class="cause-content">
-                    <h3 style="text-align: center;">HUMAN RIGHTS</h3>
-                        <p>Involves the universal protection, promotion, and implementation of fundamental freedoms, focusing on dignity, equality, and justice..</p>
-                       
+                        <h3>HUMAN RIGHTS</h3>
+                        <p>Involves the universal protection, promotion, and implementation of fundamental freedoms, focusing on dignity, equality, and justice.</p>
                     </div>
                 </div>
                 
                 <div class="cause-card">
                     <div class="cause-image">
-                        <img src="Poverty eradication and Livelihoods Empowerments.jpg" alt="Poverty eradication and Livelihoods Empowerments">
+                        <img src="Poverty eradication and Livelihoods Empowerments.jpg" alt="Poverty Eradication">
                     </div>
                     <div class="cause-content">
-                        <h3 style="text-align: center;">Poverty Eradication and Livelihoods Empowerment</h3>
-                        <p>Poverty eradication and Livelihoods Empowerment constitute a critical, multifaceted thematic area in international development, aimed at shifting vulnerable households from dependency to self-reliance through, capacity building, asset accumulation, and financial inclusion.</p>
+                        <h3>Poverty Eradication & Livelihoods Empowerment</h3>
+                        <p>Aimed at shifting vulnerable households from dependency to self-reliance through capacity building, asset accumulation, and financial inclusion.</p>
                     </div>
                 </div>
 
@@ -1578,7 +1437,7 @@
                         <img src="Education.jpg" alt="Education">
                     </div>
                     <div class="cause-content">
-                        <h3 style="text-align: center;">EDUCATION</h3>
+                        <h3>EDUCATION</h3>
                         <p>Focuses on improving access to quality education, promoting literacy, and ensuring inclusive learning opportunities for all children and adults.</p>
                     </div>
                 </div>
@@ -1588,8 +1447,8 @@
                         <img src="Water and Sanitation.jpg" alt="Water and Sanitation">
                     </div>
                     <div class="cause-content">
-                        <h3 style="text-align: center;">WATER AND SANITATION</h3>
-                        <p>Water and sanitation is a critical thematic area, aiming for universal access to safe drinking water, sanitation, and hygiene (WASH)</p>
+                        <h3>WATER AND SANITATION</h3>
+                        <p>Aiming for universal access to safe drinking water, sanitation, and hygiene (WASH) in communities.</p>
                     </div>
                 </div>
 
@@ -1598,7 +1457,7 @@
                         <img src="Nutrition.jpg" alt="Nutrition">
                     </div>
                     <div class="cause-content">
-                        <h3 style="text-align: center;">NUTRITION</h3>
+                        <h3>NUTRITION</h3>
                         <p>Focuses on improving nutritional outcomes, especially for children and mothers, through targeted interventions and community-based programs.</p>
                     </div>
                 </div>
@@ -1606,7 +1465,6 @@
         </div>
     </section>
 
-    
     <!-- Projects Section -->
     <section class="section" id="projects">
         <div class="container">
@@ -1618,63 +1476,52 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="Social Behaviour.jpg" alt="Social Behaviour Change Communication to prevent Malaria in pregnancy through increasing IPTp uptake.">
+                        <img src="Social Behaviour.jpg" alt="Malaria Prevention">
                         <div class="project-badge">Ongoing</div>
                     </div>
                     <div class="project-content">
-                        <h3>Social Behaviour Change Communication to prevent Malaria in pregnancy through increasing IPTp uptake</h3>
-                        <p>Social and Behaviour Change Communication (SBCC) for Malaria in Pregnancy (MiP) increases Intermittent Preventive Treatment (IPTp) uptake by influencing knowledge, attitudes, and social norms among pregnant women, families, and health workers. Effective strategies include leveraging community role models, fostering male involvement, and promoting early Antenatal Care (ANC) to ensure at least three doses of SP. </p>
+                        <h3>Social Behaviour Change Communication to prevent Malaria in pregnancy</h3>
+                        <p>Increasing Intermittent Preventive Treatment (IPTp) uptake by influencing knowledge, attitudes, and social norms among pregnant women, families, and health workers through community role models and early Antenatal Care promotion.</p>
                     </div>
                 </div>
-
-
-
                 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="Healthy Mothers, Smiling Babies Campaign Project.jpg" alt="Healthy Mothers, Smiling Babies Campaign Project">
+                        <img src="Healthy Mothers, Smiling Babies Campaign Project.jpg" alt="Maternal Health">
                         <div class="project-badge">Completed</div>
                     </div>
                     <div class="project-content">
-                        <h3>Healthy Mothers, Smiling Babies Campaign Project</h3>
-                        <p>This task is critical. Tragically, based on currently published estimates, 260 000 women lose their life due to pregnancy or childbirth each year, while over 2 million babies die in their first month of life and around 2 million more are stillborn. That’s roughly 1 preventable death every 7 seconds.
-                           Based on current trends, a staggering 4 out of 5 countries are off track to meet targets for improving maternal survival by 2030. 1 in 3 will fail to meet targets for reducing newborn deaths.
-                           Women and families everywhere need high quality care that supports them physically and emotionally, before, during and after birth.
-                          Health systems must evolve to manage the many health issues that impact maternal and newborn health. These not only include direct obstetric complications but also mental health conditions, noncommunicable diseases and family planning.
-                         </p>
+                        <h3>Healthy Mothers, Smiling Babies Campaign</h3>
+                        <p>Addressing maternal and newborn mortality through high-quality care that supports women physically and emotionally before, during, and after birth, managing obstetric complications, mental health, and family planning needs.</p>
                     </div>
                 </div>
                 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="Increasing Covid-19 Vaccine uptake in Ghana.jpg" alt="Increasing Covid-19 Vaccine uptake in Ghana">
+                        <img src="Increasing Covid-19 Vaccine uptake in Ghana.jpg" alt="COVID-19 Vaccination">
                         <div class="project-badge">Ongoing</div>
                     </div>
                     <div class="project-content">
-                        <h3>Increasing Covid-19 Vaccine uptake in Ghana</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi adipisci ad numquam aut fugit, illum delectus, optio deleniti labore dolorum, exercitationem odio. Esse dolor quisquam aliquam quidem, expedita corporis necessitatibus!</p>
-                       
+                        <h3>Increasing COVID-19 Vaccine Uptake in Ghana</h3>
+                        <p>Community engagement and education initiatives to increase vaccination rates through awareness campaigns, addressing vaccine hesitancy, and improving access to vaccination services.</p>
                     </div>
                 </div>
 
-                 <div class="project-card">
+                <div class="project-card">
                     <div class="project-image">
-                        <img src="Increasing Immunization coverage in Children less than five years through community advocacy and Mobilization..jpg" alt="Increasing Immunization coverage in Children less than five years through community advocacy and Mobilization.">
+                        <img src="Increasing Immunization coverage in Children less than five years through community advocacy and Mobilization..jpg" alt="Child Immunization">
                         <div class="project-badge">Ongoing</div>
                     </div>
                     <div class="project-content">
-                        <h3>Increasing Immunization coverage in Children less than five years through community advocacy and Mobilization.</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi adipisci ad numquam aut fugit, illum delectus, optio deleniti labore dolorum, exercitationem odio. Esse dolor quisquam aliquam quidem, expedita corporis necessitatibus!</p>
-                       
+                        <h3>Increasing Immunization Coverage in Children</h3>
+                        <p>Community advocacy and mobilization to improve immunization rates for children under five years, ensuring protection against vaccine-preventable diseases through outreach and education.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-
-    <!-- Gallery Section - 2 Columns on all devices -->
+    <!-- Gallery Section -->
     <section class="section gallery" id="gallery">
         <div class="container">
             <div class="section-title">
@@ -1684,82 +1531,82 @@
             
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="g1.jpg" alt="">
+                    <img src="g1.jpg" alt="Community Engagement">
                     <div class="gallery-overlay">
-                        <h3></h3>
-                        <p></p>
+                        <h3>Community Engagement</h3>
+                        <p>Working directly with local communities</p>
                     </div>
                 </div>
                 
                 <div class="gallery-item">
-                    <img src="g2.jpg" alt="Clean water project">
+                    <img src="g2.jpg" alt="Health Education">
                     <div class="gallery-overlay">
-                        <h3></h3>
-                        <p></p>
+                        <h3>Health Education</h3>
+                        <p>Training community health workers</p>
                     </div>
                 </div>
                 
                 <div class="gallery-item">
-                    <img src="g3.jpg" alt="">
+                    <img src="g3.jpg" alt="Field Work">
                     <div class="gallery-overlay">
-                        <h3></h3>
-                        <p></p>
+                        <h3>Field Work</h3>
+                        <p>Implementing projects in rural areas</p>
                     </div>
                 </div>
                 
                 <div class="gallery-item">
-                    <img src="g4.jpg" alt="">
+                    <img src="g4.jpg" alt="Team Activities">
                     <div class="gallery-overlay">
-                        <h3></h3>
-                        <p></p>
+                        <h3>Team Activities</h3>
+                        <p>Collaborating for community development</p>
                     </div>
                 </div>
                 
                 <div class="gallery-item">
-                    <img src="g5.jpg" alt="">
+                    <img src="g5.jpg" alt="Community Training">
                     <div class="gallery-overlay">
-                        <h3></h3>
-                        <p></p>
+                        <h3>Community Training</h3>
+                        <p>Capacity building workshops</p>
                     </div>
                 </div>
                 
                 <div class="gallery-item">
-                    <img src="g6.jpg" alt="">
+                    <img src="g6.jpg" alt="Project Implementation">
                     <div class="gallery-overlay">
-                        <h3></h3>
-                        <p></p>
+                        <h3>Project Implementation</h3>
+                        <p>Hands-on community work</p>
                     </div>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="g7.jpg" alt="">
+                    <img src="g7.jpg" alt="Health Services">
                     <div class="gallery-overlay">
-                        <h3></h3>
-                        <p></p>
+                        <h3>Health Services</h3>
+                        <p>Providing medical support</p>
                     </div>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="g8.jpg" alt="">
+                    <img src="g8.jpg" alt="Education Programs">
                     <div class="gallery-overlay">
-                        <h3></h3>
-                        <p></p>
+                        <h3>Education Programs</h3>
+                        <p>Learning and development initiatives</p>
                     </div>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="g9.jpg" alt="">
+                    <img src="g9.jpg" alt="Community Meetings">
                     <div class="gallery-overlay">
-                        <h3></h3>
-                        <p></p>
+                        <h3>Community Meetings</h3>
+                        <p>Engaging with local stakeholders</p>
                     </div>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="g10.jpg" alt="">
+                    <img src="g10.jpg" alt="Field Research">
                     <div class="gallery-overlay">
-                        <h3></h3>
-                        <p></p>
+                        <h3>Field Research</h3>
+                        <p>Data collection and analysis</p>
                     </div>
                 </div>
             </div>
@@ -1781,132 +1628,110 @@
                     </div>
                     <div class="member-info">
                         <h3>Yilob Andrew Embireh</h3>
-                        <p>Executive Director</p>
+                        <span class="position">Executive Director</span>
                         <p class="bio">With 15+ years in non-profit leadership, Yilob Andrew Embireh drives our strategic vision and global partnerships.</p>
                         <div class="member-social">
-                            <a href="https://www.facebook.com/achireh" class="social-icon" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.linkedin.com/in/andrew-yilob-embireh-58790244?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="social-icon" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="https://wa.me/233541237088" class="social-icon whatsapp-icon" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp">
-                            <i class="fab fa-whatsapp"></i>
-</a>
-                </div>
+                            <a href="https://www.facebook.com/achireh" target="_blank" rel="noopener noreferrer" title="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/andrew-yilob-embireh-58790244" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://wa.me/233541237088" target="_blank" rel="noopener noreferrer" title="WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
                         </div>
                     </div>
-                </div>               
-    </section>
-
-    
-
-    
-    <!-- Google Map Section - Standalone -->
-<section class="map-section">
-    <div class="container">
-        <div class="map-container">
-            <!-- Replace with your actual Google Maps embed code -->
-            <iframe 
-                 src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d704.6475275700788!2d-2.506458130550229!3d10.047039919918072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDAyJzQ5LjMiTiAywrAzMCcyMC45Ilc!5e1!3m2!1sen!2sgh!4v1770581703239!5m2!1sen!2sgh" width=100% height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">  
-            </iframe>
-            
-        </div>
-    </div>
-</section>
-
-   <!-- Footer -->
-<footer id="contact">
-    <div class="container">
-        <!-- ADD SPONSOR BADGES HERE -->
-        <div style="
-            background: rgba(255,255,255,0.03); 
-            padding: 15px 0; 
-            border-top: 1px solid rgba(255,255,255,0.1);
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            margin-bottom: 30px;
-            text-align: center;">
-            
-            <p style="
-                color: rgba(255,255,255,0.6); 
-                font-size: 0.85rem; 
-                margin-bottom: 12px; 
-                letter-spacing: 1px;
-                text-transform: uppercase;">
-                SPONSORS
-            </p>
-            
-            <div style="
-                display: flex; 
-                justify-content: center; 
-                align-items: center; 
-                flex-wrap: wrap; 
-                gap: 15px;">
-                
-                <!-- Replace with your actual sponsor logos -->
-                <img src="GHANET.jpg" 
-                     alt="GHANET" 
-                     style="width: 40px; height: 40px; opacity: 0.7;">
-                
-                <img src="mnep.jpg" 
-                     alt="MNEP" 
-                     style="width: 40px; height: 40px; opacity: 0.7;">
-                
-                <img src="crs.jpg" 
-                     alt="CRS" 
-                     style="width: 40px; height: 40px; opacity: 0.7;">
-                
-                <img src="chag.jpg" 
-                     alt="CHAG" 
-                     style="width: 40px; height: 40px; opacity: 0.7;">
+                </div>
             </div>
         </div>
-        
-        <!-- Your existing footer content -->
-        <div class="footer-content">
-            <div class="footer-column">
-                <h3>AICODEV</h3>
-                <p>Building Communities Through Innovation</p>
-                
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/aicodev.ghana" class="social-icon" target="_blank" rel="noopener noreferrer" title="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/company/aicodev-ghana/" class="social-icon" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://wa.me/233541237088" class="social-icon whatsapp-icon" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d704.6475275700788!2d-2.506458130550229!3d10.047039919918072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDAyJzQ5LjMiTiAywrAzMCcyMC45Ilc!5e1!3m2!1sen!2sgh!4v1770581703239!5m2!1sen!2sgh" 
+                    width="100%" 
+                    height="500" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="AICODEV Ghana Location"
+                    class="google-map">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <!-- Sponsors Section -->
+            <div class="sponsors-section">
+                <p class="sponsors-title">OUR PARTNERS & SPONSORS</p>
+                <div class="sponsors-grid">
+                    <img src="GHANET.jpg" alt="GHANET" class="sponsor-logo">
+                    <img src="mnep.jpg" alt="MNEP" class="sponsor-logo">
+                    <img src="crs.jpg" alt="CRS" class="sponsor-logo">
+                    <img src="chag.jpg" alt="CHAG" class="sponsor-logo">
                 </div>
             </div>
             
-            <div class="footer-column">
-                <h3>Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#team">Team</a></li>
-                    <li><a href="#causes">Our Causes</a></li>
-                </ul>
+            <!-- Footer Content -->
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>AICODEV</h3>
+                    <p>Building Communities Through Innovation</p>
+                    
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/aicodev.ghana" class="social-icon" target="_blank" rel="noopener noreferrer" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/aicodev-ghana/" class="social-icon" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://wa.me/233541237088" class="social-icon" target="_blank" rel="noopener noreferrer" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#causes">Thematic Areas</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> <a href="#contact">Wa West, Ghana</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+233541237088">+233 (54) 123-7088</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:aicodev@gmail.com">aicodev@gmail.com</a></li>
+                    </ul>
+                </div>
             </div>
             
-            <div class="footer-column">
-                <h3>Contact Info</h3>
-                <ul class="footer-links">
-                    <li><i class="fas fa-map-marker-alt"></i> WA West</li>
-                    <li><i class="fas fa-phone"></i> +233 (54) 123-7088</li>
-                    <li><i class="fas fa-envelope"></i> aicodev@gmail.com</li>
-                </ul>
+            <!-- Copyright -->
+            <div class="copyright">
+                <p>&copy; 2026 AICODEV Ghana. All rights reserved. | 
+                    <a href="#">Privacy Policy</a> | 
+                    <a href="#">Terms of Service</a>
+                </p>
             </div>
         </div>
-        
-        <div class="copyright">
-            <p>&copy; 2026 AICODEV. All rights reserved. | 
-                <a href="#" style="color: rgba(255, 255, 255, 0.7);">Privacy Policy</a> | 
-                <a href="#" style="color: rgba(255, 255, 255, 0.7);">Terms of Service</a>
-            </p>
-        </div>
-    </div>
-</footer>
+    </footer>
+
+    <!-- JavaScript -->
     <script>
         // Initialize Vanta.js animated background
         let vantaEffect;
@@ -1965,117 +1790,13 @@
             }
         });
 
-        // Counter animation for stats
-        const counters = document.querySelectorAll('.counter');
-        const speed = 200;
-
-        const animateCounters = () => {
-            counters.forEach(counter => {
-                const target = +counter.getAttribute('data-target');
-                const count = +counter.innerText;
-                const increment = target / speed;
-
-                if (count < target) {
-                    counter.innerText = Math.ceil(count + increment);
-                    setTimeout(animateCounters, 1);
-                } else {
-                    counter.innerText = target.toLocaleString();
-                }
-            });
-        };
-
-        // Animate elements on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // Animate progress bars
-                    if (entry.target.classList.contains('progress')) {
-                        const width = entry.target.getAttribute('data-width');
-                        entry.target.style.width = width + '%';
-                    }
-                    
-                    // Animate cards
-                    if (entry.target.classList.contains('cause-card') || 
-                        entry.target.classList.contains('project-card') || 
-                        entry.target.classList.contains('team-member') ||
-                        entry.target.classList.contains('gallery-item')) {
-                        entry.target.style.animationDelay = '0.2s';
-                    }
-                    
-                    // Animate counters
-                    if (entry.target.classList.contains('counter') && entry.target.innerText === '0') {
-                        animateCounters();
-                    }
-                    
-                    // Add animation class to elements
-                    entry.target.classList.add('animated');
-                }
-            });
-        }, observerOptions);
-
-        // Observe elements
-        document.querySelectorAll('.progress').forEach(el => observer.observe(el));
-        document.querySelectorAll('.cause-card, .project-card, .team-member, .gallery-item').forEach(el => observer.observe(el));
-        document.querySelectorAll('.counter').forEach(el => observer.observe(el));
-        document.querySelectorAll('.hero-text, .hero-image, .about-image, .about-text').forEach(el => observer.observe(el));
-
-        // Donation options
-        const donationOptions = document.querySelectorAll('.donation-option');
-        const customAmountInput = document.getElementById('customAmount');
-
-        donationOptions.forEach(option => {
-            option.addEventListener('click', () => {
-                donationOptions.forEach(opt => opt.classList.remove('active'));
-                option.classList.add('active');
-                customAmountInput.value = option.getAttribute('data-amount');
-            });
-        });
-
-        customAmountInput.addEventListener('input', () => {
-            donationOptions.forEach(opt => opt.classList.remove('active'));
-        });
-
-        // Donate button
-        const donateBtn = document.getElementById('donateBtn');
-        donateBtn.addEventListener('click', () => {
-            const amount = customAmountInput.value;
-            if (amount && amount > 0) {
-                alert(`Thank you for your donation of $${amount}! You will be redirected to our secure payment gateway.`);
-                // In a real implementation, you would redirect to a payment gateway
-                // window.location.href = `https://payment-gateway.com/donate?amount=${amount}`;
-            } else {
-                alert('Please enter a valid donation amount.');
-            }
-        });
-
-        // Newsletter subscription
-        const subscribeBtn = document.getElementById('subscribeBtn');
-        const newsletterEmail = document.getElementById('newsletterEmail');
-        
-        subscribeBtn.addEventListener('click', () => {
-            const email = newsletterEmail.value;
-            if (email && email.includes('@') && email.includes('.')) {
-                alert(`Thank you for subscribing with ${email}! You'll receive our next update.`);
-                newsletterEmail.value = '';
-            } else {
-                alert('Please enter a valid email address.');
-            }
-        });
-
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') === '#') return;
+                
                 e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
+                const targetElement = document.querySelector(this.getAttribute('href'));
                 if (targetElement) {
                     window.scrollTo({
                         top: targetElement.offsetTop - 80,
@@ -2087,13 +1808,10 @@
 
         // Initialize animations on page load
         window.addEventListener('load', () => {
-            // Add animation classes to hero elements
-            document.querySelector('.hero-text').classList.add('animated');
-            document.querySelector('.hero-image').classList.add('animated');
-            
-            // Preload gallery images for smoother animation
-            const galleryImages = document.querySelectorAll('.gallery-item img');
-            galleryImages.forEach(img => {
+            // Preload images for smoother experience
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                if (img.complete) return;
                 const tempImg = new Image();
                 tempImg.src = img.src;
             });
@@ -2106,23 +1824,23 @@
             }
         });
 
-        // Touch-friendly gallery interactions for mobile
-        let touchStartX = 0;
-        let touchEndX = 0;
-        
+        // Gallery touch interactions for mobile
         document.querySelectorAll('.gallery-item').forEach(item => {
+            let touchStartY = 0;
+            let touchEndY = 0;
+            
             item.addEventListener('touchstart', e => {
-                touchStartX = e.changedTouches[0].screenX;
+                touchStartY = e.changedTouches[0].clientY;
             });
             
             item.addEventListener('touchend', e => {
-                touchEndX = e.changedTouches[0].screenX;
-                if (Math.abs(touchEndX - touchStartX) < 5) {
-                    // Toggle overlay on tap
+                touchEndY = e.changedTouches[0].clientY;
+                // Only trigger if it's a tap (not a swipe)
+                if (Math.abs(touchEndY - touchStartY) < 10) {
                     const overlay = item.querySelector('.gallery-overlay');
-                    overlay.style.opacity = overlay.style.opacity === '1' ? '0' : '1';
-                    overlay.style.transform = overlay.style.transform.includes('translateY(0)') ? 
-                        'translateY(20px)' : 'translateY(0)';
+                    const isVisible = overlay.style.opacity === '1';
+                    overlay.style.opacity = isVisible ? '0' : '1';
+                    overlay.style.transform = isVisible ? 'translateY(20px)' : 'translateY(0)';
                 }
             });
         });
